@@ -36,7 +36,6 @@ export function detectRaisedFingers(landmarks) {
 }
 
 export function drawHand(context, canvas, landmarks) {
-  context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillStyle = "#22d3ee";
   context.strokeStyle = "#f8fafc";
   context.lineWidth = 3;

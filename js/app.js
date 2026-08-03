@@ -44,6 +44,7 @@ async function startCameraAndAudio() {
   if (!landmarker || cameraStarted) return;
   try {
     startButton.disabled = true;
+    status.textContent = "Chargement des sons de piano…";
     await music.initialize();
     status.textContent = "Demande d’accès à la caméra…";
     video.srcObject = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user", width: { ideal: 1280 }, height: { ideal: 720 } }, audio: false });
