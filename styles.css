@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background: #111827;
+}
+
+main { width: min(100%, 900px); margin: 0 auto; }
+h1 { margin-top: 0; }
+
+button {
+  padding: .8rem 1.2rem;
+  border: 0;
+  border-radius: .6rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .6; cursor: wait; }
+
+.instructions {
+  padding: 1rem;
+  margin-block: 1rem;
+  border: 1px solid #374151;
+  border-radius: .8rem;
+  background: #1f2937;
+}
+
+.instructions p { margin-block: .4rem; }
+.hint { color: #a5f3fc; }
+#status, #detected-hand, #detected-fingers { min-height: 1.5rem; }
+
+.camera {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 2px solid #374151;
+  border-radius: 1rem;
+  background: black;
+}
+
+video, canvas { display: block; width: 100%; height: auto; }
+video, canvas { transform: scaleX(-1); }
+canvas { position: absolute; inset: 0; pointer-events: none; }
+
+@media (max-width: 600px) { body { padding: 1rem; } }
